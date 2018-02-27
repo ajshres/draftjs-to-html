@@ -326,7 +326,7 @@ function getEntityMarkup(
     }
   }
   if (entity.type === 'MENTION') {
-    return `<a href="${entity.data.url}" class="wysiwyg-mention" data-mention data-value="${entity.data.value}">${text}</a>`;
+    return `<a href="${entity.data.url}" class="wysiwyg-mention" data-mention data-value="${entity.data.value}" data-id="${entity.data.id || entity.data.value}">${text}</a>`;
   }
   if (entity.type === 'LINK') {
     const targetOption = entity.data.targetOption || '_self';
