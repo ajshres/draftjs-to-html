@@ -4,11 +4,8 @@ import pkg from './package.json';
 export default [
   {
     input: 'js/index.js',
-    output: [
-      { file: pkg.main, format: 'umd', name: 'draftjsToHtml' },
-    ],
-    plugins: [
-      babel(),
-    ],
+    external: ['react', 'react-dom', 'draft-js'],
+    output: [{ file: pkg.main, format: 'umd', name: 'draftjsToHtml' }],
+    plugins: [babel()],
   },
 ];
